@@ -2,8 +2,7 @@ import React from 'react';
 
 const Experiences = ({experiences}) => {
 
-    const Experience = (experience, index) => {    
-        console.log(experiences.length-1+' '+index)
+    const Experience = (experience, index) => {        
         return(
             <React.Fragment key={index}>
                 <div className="w3-container" >
