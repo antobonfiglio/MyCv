@@ -1,0 +1,97 @@
+{
+  "FirstName": "Antonino",
+  "LastName": "Bonfiglio",
+  "JobTitle": "Fullstack .Net Developer",
+  "Residence": "Melbourne, AU",
+  "WebSite": "www.telstrahealth.com",
+  "Mobile": "043-4021432",
+  "Email" : "antobonfiglio@gmail.com",
+  "Experiences" :
+  [
+    {
+      "Id": 1,
+      "From": "Feb. 2018",
+      "To": "Current",
+      "Company": "Telstra Health",
+      "WebSite": "https://www.telstrahealth.com",
+      "Location": "Melbourne, VIC Australia",
+      "Role": "Senior Developer",
+      "TeamSize": "7",
+      "Activities": [
+        "Building Microservice Architectures on Microsoft Azure with React.js/MobX/Typescript , Node.js,  Sequelize.js,  Azure Functions, OAuth, ASP.Net MVC5, Entity Framework, Sql Server, MySql",
+        "Building CI/CD Pipeline with Visual Studio Team Services",
+        "Building Mobile Apps with Xamarin Forms",
+        "Agile SCRUM"
+      ]
+    },
+    {
+        "Id": 2,
+        "From": "Dec. 2014",
+        "To": "Feb. 2018",
+        "Company": "Macingo Technologies",
+        "WebSite": "https://www.macingo.com",
+        "Location": "Melbourne, VIC Australia",
+        "Role": "Founder and IT Director",
+        "TeamSize": "5",
+        "Activities": [
+          "Designing and developing the platform with Asp.Net MVC 5, Entity Framework 6 ( CF ), Bootstrap, SASS, GRUNT, Azure Functions , Azure WebJobs ( Used for parallel processing tasks such as : Sending emails, Sending of PUSH notifications, etc ), Redis Cache ( Used as output cache to speed up the page load ), Azure App Service, Azure Storage Accounts ( to save our users uploaded contents ), SSL with Let’s Encrypt ( Powershell Procedures to automatically renew the SSL certificate)",
+          "Building the web API using Asp.Net Web API, OAuth, Swagger (For the online documentation )",
+          "Building CI/CD Pipeline for both platform and web api with Visual Studio Team Services",
+          "Building the first version of the mobile app using Ionic Framework 1.0 which is based on Angular JS and then  re-writing the whole app using the version 2.0 which is based on Angular",
+          "Agile LEAN"
+        ]
+    }
+  ],
+  "Skills":[
+    {
+      "Speciality":"ASP.Net Framework 4.6, ASP.Net Core 2.1",
+      "Level":95
+    },
+    {
+      "Speciality":"ASP.Net MVC5, .Net WEB API",
+      "Level":100
+    },
+    {
+      "Speciality":"Angular 4+",
+      "Level":70
+    },
+    {
+      "Speciality":"React",
+      "Level":80
+    }
+  ],
+  "Languages":[
+    {
+      "Language":"Italian",
+      "Level":"100"
+    },
+    {
+      "Language":"English",
+      "Level":"95"
+    },
+    {
+      "Language":"Spanish",
+      "Level":"25"
+    }
+  ],
+  "Studies":[
+    {
+      "FromYear":"2002",
+      "ToYear":"2003",
+      "School":"Centro di formazione professionale L.Petroselli, Rome, IT",
+      "Degree":"Diploma E-commerce Technologies"
+    },
+    {
+      "FromYear":"2000",
+      "ToYear":"2003",
+      "School":"La Sapienza University, Rome, IT",
+      "Degree":"Science of Communication (2/4yrs completed)"
+    },
+    {
+      "FromYear":"1995",
+      "ToYear":"200",
+      "School":"Liceo Scientifico Michele Guerrisi, Cittanova RC, IT",
+      "Degree":"High school specializing in scientific subjects"
+    }
+  ]
+}
