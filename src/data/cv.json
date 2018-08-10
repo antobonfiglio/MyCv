@@ -40,6 +40,54 @@
           "Building the first version of the mobile app using Ionic Framework 1.0 which is based on Angular JS and then  re-writing the whole app using the version 2.0 which is based on Angular",
           "Agile LEAN"
         ]
+    },
+    {
+      "Id": 3,
+      "From": "May. 2012",
+      "To": "Dec. 2014",
+      "Company": "Neomobile Group",
+      "WebSite": "https://www.neomobile.com",
+      "Location": "Rome, RM, Italy",
+      "Role": "Dev Manager",
+      "TeamSize": "5",
+      "Activities": [
+        "Managing operation activities of the mobile entertainment platform for Italy",
+        "Management and control of the platform and of the delivery and billing subsystems",
+        "Management and coordination of the development activities: requirements analysis, planning, coordination and supervision of the development team",
+        "Discussing and negotiating current and future requirements with business team, reviewing projects, recruiting, training new employees, supporting the company-wide standard definitions in areas such as data modelling, interfaces definition process, and integration architecture",
+        "Agile SCRUM"
+      ]
+    },
+    {
+      "Id": 4,
+      "From": "Sept. 2008",
+      "To": "July 2010",
+      "Company": "Neomobile Group",
+      "WebSite": "https://www.neomobile.com",
+      "Location": "Rome, RM, Italy",
+      "Role": "Business Analyst",
+      "TeamSize": "3",
+      "Activities": [
+        "Analyze business requirements, understand and evaluate their feasibility and produce the technical requirements. I also worked with third parties designing and following the integration process",
+        "I have been actively involved in the definition of Neomobile application life cycle management and in the adoption of Microsoft TFS (Team Foundation Server)"        
+      ]
+    },
+    {
+      "Id": 5,
+      "From": "Jan. 2003",
+      "To": "Aug. 2008",
+      "Company": "Movenda",
+      "WebSite": "https://www.movenda.com",
+      "Location": "Rome, RM, Italy",
+      "Role": "Software Developer",
+      "TeamSize": "3",
+      "Activities": [
+        "Led the development of the front-end of a Mobile Monitoring System. The product, called M3, was presented at the Mobile World Congress (Barcelona) in the 2008. It allows the quality control of Sending/Receiving SMS , MMS, Wap Push download, Voice Call.",
+        "Development of Speedup an innovative web framework which has been presented at SMAU ( the most important Italian event dedicated to Information & Communication Technology ) in the 2007",
+        "Junior Java developer in the team for the development of a Office Certified Email provisioning system",
+        "Training on OOP, Java, E/R Databases ( MySql, Oracle ), Sun Solaris/Linux OS",
+        "Waterfall"
+      ]
     }
   ],
   "Skills":[
