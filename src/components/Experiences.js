@@ -6,7 +6,7 @@ const Experiences = ({experiences}) => {
         return(
             <React.Fragment key={index}>
                 <div className="w3-container" >
-                    <h5 className="w3-opacity"><b>{experience.Role} / <a href={experience.WebSite} target="blank">{experience.WebSite}</a></b></h5>
+                    <h5 className="w3-opacity"><b>{experience.Role} - <a href={experience.WebSite} target="blank">{experience.WebSite}</a></b></h5>
                     <h6 className="w3-text-teal">
                     <i className="fa fa-calendar fa-fw w3-margin-right"></i>{experience.From +' - '}   
                     {
