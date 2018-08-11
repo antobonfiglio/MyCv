@@ -1,9 +1,9 @@
 import * as React from 'react';
-import Bio from './components/Bio';
-import Experiences from './components/Experiences';
 import './App.css';
 import CV from './data/cv.json';
-import Studies from './components/Education';
+import Bio from './components/Bio';
+import Experiences from './components/Experiences';
+import Studies from './components/Studies';
 
 class App extends React.Component {
   render() {
