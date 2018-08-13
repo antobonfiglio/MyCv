@@ -24,7 +24,7 @@ class App extends React.Component {
           {/* <!-- Right Column --> */}
           <div className="w3-twothird">
             <Experiences experiences={CV.Experiences} />
-            <Studies studies={CV.Studies}/>
+            <Studies studies={CV.Studies} isInEditMode={false} />
           {/* <!-- End Right Column --> */}
           </div>
           

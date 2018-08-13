@@ -1,7 +1,7 @@
 {
   "FirstName": "Antonino",
   "LastName": "Bonfiglio",
-  "JobTitle": "Fullstack .Net Developer",
+  "JobTitle": "Fullstack JS/.Net Developer",
   "Residence": "Melbourne, AU",
   "WebSite": "www.telstrahealth.com",
   "Mobile": "043-4021432",
@@ -137,7 +137,7 @@
     },
     {
       "FromYear":"1995",
-      "ToYear":"200",
+      "ToYear":"2000",
       "School":"Liceo Scientifico Michele Guerrisi, Cittanova RC, IT",
       "Degree":"High school specializing in scientific subjects"
     }
