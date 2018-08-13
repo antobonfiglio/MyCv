@@ -27,8 +27,9 @@ const Bio = ({cv}) =>{
     return (
         <React.Fragment>
         <div className="w3-white w3-text-grey w3-card-4">
-            <div className="w3-display-container">
-                <img src="https://avatars2.githubusercontent.com/u/4174914?s=460&v=4" style={{width:100 +'%'}} alt="Avatar" />
+            <div className="w3-display-container">            
+                {/* <img src="https://lh3.google.com/u/0/d/1wQ_9CD_UQWCFFvFGiHMUks3cF_1v0sYP=w2984-h1688-iv1" style={{width:100 +'%'}} alt="Avatar" /> */}
+                <img src="https://lh3.google.com/u/0/d/14soyDt94koChn9geVWBhT9Dw0PjJIA7v=w600-k-iv1" style={{width:100 +'%'}} alt="Avatar" />
                 <div className="w3-display-bottomleft w3-container w3-text-black" >
                     <h2>{cv.FirstName +' '+ cv.LastName}</h2>
                 </div>

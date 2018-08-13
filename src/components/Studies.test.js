@@ -9,7 +9,7 @@ configure({ adapter: new Adapter() });
 
 describe('Studies component testing', function() {
   it('renders without crashing', function() {
-    const wrapper = shallow(<Studies studies={data.Studies} />);    
+    const wrapper = shallow(<Studies studies={data.Studies} isInEditMode={false} />);    
     expect(wrapper).to.have.length(1);    
   });
 });
