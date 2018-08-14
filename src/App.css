@@ -1,0 +1,11 @@
+.ribbon{  
+    display:none;
+    position: absolute; top: 0; left: 0; border: 0;
+} 
+
+@media (min-width:1619px){
+    .ribbon{ 
+        display:block;      
+        position: absolute; top: 0; left: 0; border: 0;
+    }  
+}
