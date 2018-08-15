@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Toggle from './Toggle';
 import Experience from './Experience';
 
-export default class  Experiences extends Component {
+export default class  ExperienceList extends Component {
 
     constructor(props){
         super(props);
@@ -53,7 +53,7 @@ export default class  Experiences extends Component {
 
     editExperience = (experience, index) => {  
         return(
-            <React.Fragment key={index}>
+            <React.Fragment key={experience.Id}>
                 <div className="w3-container" >
                     <h5 className="w3-opacity"><b>
                     <input type="text" 
@@ -175,8 +175,9 @@ export default class  Experiences extends Component {
     }
 
     addExperience = () => {
-        this.setState((prevState, props) =>  {
-          return { experiences:this.state.experiences.concat([{ Role: '', Website:'', From:'', To:'', Activities:[] }]) }
+        this.setState((prevState, props) =>  {                    
+          prevState.experiences.unshift({ Id:prevState.experiences.length + 1, Role: '', Website:'', From:'', To:'', Activities:[''] });   
+          return { experiences:  prevState.experiences };
         });
     }
     
