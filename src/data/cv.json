@@ -1,10 +1,11 @@
 {
+  "photoURL" : "https://www.w3schools.com/w3images/avatar_hat.jpg",
   "FirstName": "Antonino",
   "LastName": "Bonfiglio",
-  "JobTitle": "Fullstack JS/.Net Developer",
+  "JobTitle": "Fullstack JS/.Net Developer",  
   "Residence": "Melbourne, AU",
   "WebSite": "www.telstrahealth.com",
-  "Mobile": "043-4021432",
+  "Mobile": "043-402-143-2",
   "Email" : "antobonfiglio@gmail.com",
   "Experiences" :
   [
@@ -94,6 +95,10 @@
     {
       "Speciality":"ASP.Net Framework 4.6, ASP.Net Core 2.1",
       "Level":95
+    },
+    {
+      "Speciality":"Agile SCUM",
+      "Level":90
     },
     {
       "Speciality":"ASP.Net MVC5, .Net WEB API",

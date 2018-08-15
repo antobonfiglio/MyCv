@@ -2,8 +2,8 @@ import * as React from 'react';
 import './App.css';
 import CV from './data/cv.json';
 import Bio from './components/Bio';
-import Experiences from './components/Experiences';
-import Studies from './components/Studies';
+import ExperienceList from './components/ExperienceList';
+import StudyList from './components/StudyList';
 
 class App extends React.Component {
   render() {
@@ -23,8 +23,8 @@ class App extends React.Component {
 
           {/* <!-- Right Column --> */}
           <div className="w3-twothird">
-            <Experiences experiences={CV.Experiences} />
-            <Studies studies={CV.Studies} isInEditMode={false} />
+            <ExperienceList experiences={CV.Experiences} />
+            <StudyList studies={CV.Studies} isInEditMode={false} />
           {/* <!-- End Right Column --> */}
           </div>
           

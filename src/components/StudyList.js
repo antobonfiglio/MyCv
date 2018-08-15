@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Toggle from './Toggle';
 import Study from './Study';
 
-export default class Studies extends Component {
+export default class StudyList extends Component {
 
     constructor(props){
         super(props);
@@ -114,7 +114,8 @@ export default class Studies extends Component {
 
     handleAddStudy = () => {
         this.setState((prevState, props) =>  {
-          return { studies:this.state.studies.concat([{ School: '', FromYear:'', ToYear:'', Degree:'' }]) }
+            prevState.studies.unshift({ School: '', FromYear:'', ToYear:'', Degree:'' });
+          return { studies:prevState.studies }
         });
     }
     
