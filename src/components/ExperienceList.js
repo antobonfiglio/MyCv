@@ -127,7 +127,8 @@ export default class  ExperienceList extends Component {
               if(activityIndex !== changedActivityIndex) return activity;
                 return evt.target.value;
             });
-          return { ...experience, experience };  
+            
+          return { ...experience };  
         });
     
         this.setState((prevState, props) => { 
@@ -140,7 +141,7 @@ export default class  ExperienceList extends Component {
           if (experienceIndex !== changedExperienceIndex) return experience;          
           
           experience.Activities = experience.Activities.concat(""); 
-          return { ...experience, experience };  
+          return { ...experience };  
         });
     
         this.setState((prevState, props) => { 
@@ -153,7 +154,7 @@ export default class  ExperienceList extends Component {
           if (experienceIndex !== changedExperienceIndex) return experience;          
             
           experience.Activities = experience.Activities.filter((s, activityIndex) => activityIndex !== changedActivityIndex) 
-          return { ...experience, experience };  
+          return { ...experience };  
         });
     
         this.setState((prevState, props) => { 
@@ -166,7 +167,7 @@ export default class  ExperienceList extends Component {
           if (changedExperienceIndex !== experienceIndex) return experience;          
           
           experience[evt.target.name] = evt.target.value; 
-          return { ...experience, experience };  
+          return { ...experience };  
         });
     
         this.setState((prevState, props) => { 
