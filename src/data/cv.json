@@ -93,54 +93,65 @@
   ],
   "Skills":[
     {
+      "Id":1,
       "Speciality":"ASP.Net Framework 4.6, ASP.Net Core 2.1",
       "Level":95
     },
     {
-      "Speciality":"Agile SCUM",
+      "Id":2,
+      "Speciality":"Agile SCRUM",
       "Level":90
     },
     {
+      "Id":3,
       "Speciality":"ASP.Net MVC5, .Net WEB API",
       "Level":100
     },
     {
+      "Id":4,
       "Speciality":"Angular 4+",
       "Level":70
     },
     {
+      "Id":5,
       "Speciality":"React",
       "Level":80
     }
   ],
   "Languages":[
     {
+      "Id":1,
       "Language":"Italian",
       "Level":"100"
     },
     {
+      "Id":2,
       "Language":"English",
       "Level":"95"
     },
     {
+      "Id":3,
       "Language":"Spanish",
       "Level":"25"
     }
   ],
   "Studies":[
     {
+      "Id":1,
       "FromYear":"2002",
       "ToYear":"2003",
       "School":"Centro di formazione professionale L.Petroselli, Rome, IT",
       "Degree":"Diploma E-commerce Technologies"
     },
     {
+      "Id":2,
       "FromYear":"2000",
       "ToYear":"2003",
       "School":"La Sapienza University, Rome, IT",
       "Degree":"Science of Communication (2/4yrs completed)"
     },
     {
+      "Id":3,
       "FromYear":"1995",
       "ToYear":"2000",
       "School":"Liceo Scientifico Michele Guerrisi, Cittanova RC, IT",

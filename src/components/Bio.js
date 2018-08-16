@@ -10,7 +10,7 @@ export default class Bio extends Component {
             cv: this.props.cv,
             skills: this.props.cv.Skills,
             languages: this.props.cv.Languages
-        }
+        };
     }
             
     render(){
@@ -39,7 +39,7 @@ export default class Bio extends Component {
                 <div className="w3-container">
                     {
                     isInEditMode ?
-                        this.EditInfo(cv)
+                        this.editInfo(cv)
                         :
                         this.Info(cv)
                     }
@@ -48,7 +48,14 @@ export default class Bio extends Component {
                     
                     {
                     isInEditMode ?
-                        skills.map( (skill, index) => {return this.EditSkill(skill,index)})
+                        <div>
+                             <div style={{float:'left', margin:'0px 20px 20px 0px', cursor:'pointer'}} onClick={this.addSkill}>
+                                + Add new
+                            </div>
+                        {
+                            skills.map( (skill, index) => {return this.editSkill(skill,index)})
+                        }
+                        </div>
                         :
                         skills.map( (skill, index) => {return this.Skill(skill,index)})
                     }
@@ -57,7 +64,7 @@ export default class Bio extends Component {
                     <p className="w3-large w3-text-theme"><b><i className="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
                     {
                     isInEditMode ?
-                        languages.map( (language, index) => {return this.EditLanguage(language,index)})
+                        languages.map( (language, index) => {return this.editLanguage(language,index)})
                         :
                         languages.map( (language, index) => {return this.Language(language,index)})
                     }
@@ -87,7 +94,7 @@ export default class Bio extends Component {
         );
     };
 
-    EditInfo = (cv) => {
+    editInfo = (cv) => {
         return(
             <React.Fragment>
                 <p>
@@ -134,8 +141,8 @@ export default class Bio extends Component {
                           name="Mobile"
                           value={cv.Mobile}
                           placeholder='Mobile'
-                          onChange={this.handleInputChange} /><
-                /p>
+                          onChange={this.handleInputChange} />
+                </p>
                 <hr />
             </React.Fragment>
         );
@@ -152,7 +159,7 @@ export default class Bio extends Component {
         );
     };
 
-    EditSkill = (study, index) => {  
+    editSkill = (study, index) => {  
         return(
             <React.Fragment key={index}>
                 <p><input type="text" 
@@ -168,19 +175,21 @@ export default class Bio extends Component {
                           value={study.Level} 
                           placeholder='Level'
                           onChange={this.handleSkillInputChange(index)} /> %
-                </div>                
+                </div>
+                <div onClick={this.removeSkill(index)} style={{cursor:'pointer', float:'right'}}>remove</div>  
+                <br />                
             </React.Fragment>
         );
     };
 
-    AddSkill = () => {
+    addSkill = () => {
         this.setState((prevState, props) =>  {
             prevState.skills.unshift({ Speciality: '', Level:'' });
           return { skills: prevState.skills }
         });
     }
     
-    RemoveSkill = (idx) => () => {
+    removeSkill = (idx) => () => {        
         this.setState((prevState, props) =>  {
           return { studies: prevState.skills.filter((s, sidx) => idx !== sidx) }
        });
@@ -197,7 +206,7 @@ export default class Bio extends Component {
         );
     };
 
-    EditLanguage = (language, index) => {
+    editLanguage = (language, index) => {
         return (
             <React.Fragment key={index}>
             <p><input type="text" 
@@ -218,17 +227,22 @@ export default class Bio extends Component {
         );
     };
 
-    handleInputChange = () => {
-
+    handleInputChange = (evt) => {
+        evt.persist();
+        const propertyName = evt.target.name;
+        this.setState((prevState, prevProps) => {
+            const cv = prevState.cv;
+            cv[propertyName] = evt.target.value;
+            return { ...cv };
+        });
     }
 
     handleSkillInputChange = (idx) => (evt) => {
         const skills = this.state.skills.map((skill, sidx) => {
           if (idx !== sidx) return skill;          
-          skill[evt.target.name] = evt.target.value; //I used the input 'name' (evt.target.name) attribute to update the correct property
-          return { ...skill, skill }; //return the new object with the merged updates 
+          skill[evt.target.name] = evt.target.value;
+          return { ...skill }; 
         });
-    
         this.setState((prevState, props) => { 
            return { skills }
         });
@@ -237,8 +251,8 @@ export default class Bio extends Component {
     handleLanguageInputChange = (idx) => (evt) => {
         const languages = this.state.languages.map((language, sidx) => {
           if (idx !== sidx) return language;          
-          language[evt.target.name] = evt.target.value; //I used the input 'name' (evt.target.name) attribute to update the correct property
-          return { ...language, language }; //return the new object with the merged updates 
+          language[evt.target.name] = evt.target.value; 
+          return { ...language };  
         });
     
         this.setState((prevState, props) => { 
