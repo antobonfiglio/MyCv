@@ -89,12 +89,18 @@ export default class  ExperienceList extends Component {
                      <ul>
                         {
                         experience.Activities.map((activity,i) =>                
-                            <li key={i}>
-                                <input type="text" 
-                                       style={{width:95+'%',margin:'0px 10px 10px 0px'}}                               
-                                       value={activity}                                
-                                       onChange={this.activityInputChange(index, i)} />
-                               <button type="button" onClick={this.removeActivity(index, i)} className="small">-</button>
+                            <li key={i} style={{position:'relative'}}>
+                                <div style={{marginRight:40, marginBottom:10}}>
+                                    <input type="text" 
+                                        style={{width:100+'%'}}
+                                        className="activity"
+                                        value={activity}                                
+                                        onChange={this.activityInputChange(index, i)} />
+                                 </div>                                          
+                                    <button  
+                                    style={{width:30,position:'absolute',right:0,top:0}}
+                                        type="button" 
+                                        onClick={this.removeActivity(index, i)}>-</button>                              
                             </li>
                             )
                         }
