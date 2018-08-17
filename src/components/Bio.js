@@ -41,7 +41,7 @@ export default class Bio extends Component {
                     isInEditMode ?
                         this.editInfo(cv)
                         :
-                        this.Info(cv)
+                        this.info(cv)
                     }
                     
                     <p className="w3-large"><b><i className="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
@@ -49,7 +49,7 @@ export default class Bio extends Component {
                     {
                     isInEditMode ?
                         <div>
-                             <div style={{float:'left', margin:'0px 20px 20px 0px', cursor:'pointer'}} onClick={this.addSkill}>
+                            <div style={{float:'left', margin:'0px 20px 20px 0px', cursor:'pointer'}} onClick={this.addSkill}>
                                 + Add new
                             </div>
                         {
@@ -57,16 +57,23 @@ export default class Bio extends Component {
                         }
                         </div>
                         :
-                        skills.map( (skill, index) => {return this.Skill(skill,index)})
+                        skills.map( (skill, index) => {return this.skill(skill,index)})
                     }
                     
                     <br/>
                     <p className="w3-large w3-text-theme"><b><i className="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
                     {
                     isInEditMode ?
+                        <div>
+                            <div style={{float:'left', margin:'0px 20px 20px 0px', cursor:'pointer'}} onClick={this.addLanguage}>
+                            + Add new
+                            </div>
+                        {
                         languages.map( (language, index) => {return this.editLanguage(language,index)})
+                        }
+                        </div>
                         :
-                        languages.map( (language, index) => {return this.Language(language,index)})
+                        languages.map( (language, index) => {return this.language(language,index)})
                     }
                     <br/>
                 </div>
@@ -82,7 +89,7 @@ export default class Bio extends Component {
         });
     };
 
-    Info = (cv) => {
+    info = (cv) => {
         return(
             <React.Fragment>
                 <p><i className="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i>{cv.JobTitle}</p>
@@ -148,7 +155,7 @@ export default class Bio extends Component {
         );
     };
 
-    Skill = (skill, index) => {
+    skill = (skill, index) => {
         return (
             <React.Fragment key={index}>
             <p>{skill.Speciality}</p>
@@ -189,13 +196,14 @@ export default class Bio extends Component {
         });
     }
     
-    removeSkill = (idx) => () => {        
+    removeSkill = (idx) => () => {                
         this.setState((prevState, props) =>  {
-          return { studies: prevState.skills.filter((s, sidx) => idx !== sidx) }
+
+          return { skills: prevState.skills.filter((s, sidx) => idx !== sidx) }
        });
     }
     
-    Language = (language, index) => {
+    language = (language, index) => {
         return (
             <React.Fragment key={index}>
             <p>{language.Language}</p>
@@ -205,6 +213,20 @@ export default class Bio extends Component {
             </React.Fragment>
         );
     };
+
+    addLanguage = () => {
+        this.setState((prevState, props) =>  {
+            prevState.languages.unshift({ Language: '', Level:'' });
+          return { skills: prevState.skills }
+        });
+    }
+    
+    removeLanguage = (idx) => () => {                
+        this.setState((prevState, props) =>  {
+
+          return { languages: prevState.languages.filter((s, sidx) => idx !== sidx) }
+       });
+    }
 
     editLanguage = (language, index) => {
         return (
@@ -223,6 +245,8 @@ export default class Bio extends Component {
                           placeholder='Level'
                           onChange={this.handleLanguageInputChange(index)} /> %
             </div>
+            <div onClick={this.removeLanguage(index)} style={{cursor:'pointer', float:'right'}}>remove</div>  
+            <br />
             </React.Fragment>
         );
     };
