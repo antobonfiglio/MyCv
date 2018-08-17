@@ -64,7 +64,7 @@ export default class  ExperienceList extends Component {
                                onChange={this.inputChange(index)} />
                     {' - '}                     
                      <input type="text" 
-                               style={{width:68+'%'}}
+                               style={{width:63+'%'}}
                                name="WebSite"
                                value={experience.WebSite} 
                                placeholder='Web site'
@@ -91,7 +91,7 @@ export default class  ExperienceList extends Component {
                         experience.Activities.map((activity,i) =>                
                             <li key={i}>
                                 <input type="text" 
-                                       style={{width:96+'%',margin:'0px 10px 10px 0px'}}                               
+                                       style={{width:95+'%',margin:'0px 10px 10px 0px'}}                               
                                        value={activity}                                
                                        onChange={this.activityInputChange(index, i)} />
                                <button type="button" onClick={this.removeActivity(index, i)} className="small">-</button>
