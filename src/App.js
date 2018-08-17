@@ -4,6 +4,7 @@ import CV from './data/cv.json';
 import Bio from './components/Bio';
 import ExperienceList from './components/ExperienceList';
 import StudyList from './components/StudyList';
+import './App.css';
 
 class App extends React.Component {
   render() {
